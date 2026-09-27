@@ -2215,3 +2215,60 @@ section:nth-of-type(even) {
 
     color: white;
 }
+
+
+/* =========================
+   INTERNSHIP ICON
+========================= */
+
+.internship-icon {
+    width: 64px;
+    height: 64px;
+
+    min-width: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 217, 255, 0.15),
+        rgba(122, 92, 255, 0.15),
+        rgba(255, 0, 212, 0.12)
+    );
+
+    border: 1px solid rgba(0, 217, 255, 0.35);
+
+    box-shadow:
+        0 0 20px rgba(0, 217, 255, 0.12);
+
+    transition: all 0.35s ease;
+}
+
+.internship-icon i {
+    font-size: 28px;
+
+    background: linear-gradient(
+        90deg,
+        #00d9ff,
+        #7a5cff,
+        #ff00d4
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+.internship-card:hover .internship-icon {
+    transform: translateY(-5px) scale(1.08);
+
+    border-color: rgba(0, 217, 255, 0.7);
+
+    box-shadow:
+        0 0 25px rgba(0, 217, 255, 0.25);
+}
