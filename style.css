@@ -381,146 +381,112 @@ nav ul li a.active::after {
 }
 
 
-/* =========================================================
-   HERO
-   ========================================================= */
+/* =========================
+   PROFILE IMAGE - JUMPING STYLE
+========================= */
 
-.home {
-
-    min-height: calc(100vh - 90px);
-
-    display: grid;
-
-    grid-template-columns: 1.15fr 0.85fr;
-
+.img-box {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
     align-items: center;
+    justify-content: center;
 
-    gap: 60px;
-
-    padding: 60px 0 90px;
+    animation: profileJump 3s ease-in-out infinite;
 }
 
-.header-text {
-
-    max-width: 720px;
-}
-
-.hero-intro {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    padding: 8px 16px;
-
-    margin-bottom: 22px;
-
-    border: 1px solid rgba(155, 92, 255, 0.3);
-
-    border-radius: 50px;
-
-    background:
-        rgba(155, 92, 255, 0.07);
-
-    color: #d6c5ff;
-
-    font-size: 13px;
-
-    font-weight: 500;
-
-    box-shadow:
-        0 0 25px rgba(155, 92, 255, 0.08);
-}
-
-.hero-intro::before {
-
+.img-box::before {
     content: "";
-
-    width: 7px;
-
-    height: 7px;
-
+    position: absolute;
+    inset: -8px;
     border-radius: 50%;
 
-    background: var(--green);
+    background: conic-gradient(
+        from 0deg,
+        #ff004c,
+        #ff7a00,
+        #ffe600,
+        #00ff88,
+        #00d9ff,
+        #7a5cff,
+        #ff00d4,
+        #ff004c
+    );
 
-    box-shadow:
-        0 0 12px var(--green);
+    z-index: -2;
 
-    animation: pulse 1.7s infinite;
+    animation: rainbowGlow 4s linear infinite;
 }
 
-@keyframes pulse {
+.img-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: #080b14;
+    z-index: -1;
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 50%;
+    display: block;
+
+    /* IMPORTANT: no rotation */
+    transform: none;
+
+    box-shadow:
+        0 0 25px rgba(0, 217, 255, 0.35),
+        0 0 50px rgba(122, 92, 255, 0.2);
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 0 30px rgba(0, 217, 255, 0.5),
+        0 0 70px rgba(255, 0, 212, 0.3);
+}
+
+
+/* Jumping / floating animation */
+@keyframes profileJump {
 
     0%,
     100% {
-        opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-12px);
     }
 
     50% {
-        opacity: 0.5;
-        transform: scale(0.65);
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-7px);
     }
 }
 
-.header-text h1 {
 
-    font-size: clamp(
-        42px,
-        6vw,
-        76px
-    );
-
-    line-height: 1.08;
-
-    letter-spacing: -2px;
-
-    font-weight: 800;
-
-    margin-bottom: 25px;
-}
-
-.header-text h1 span {
-
-    background: var(--rainbow);
-
-    background-size: 250% auto;
-
-    -webkit-background-clip: text;
-
-    background-clip: text;
-
-    color: transparent;
-
-    animation:
-        rainbowText 6s linear infinite;
-}
-
-@keyframes rainbowText {
-
+/* Rainbow border animation */
+@keyframes rainbowGlow {
     0% {
-        background-position: 0% center;
+        transform: rotate(0deg);
     }
 
     100% {
-        background-position: 250% center;
+        transform: rotate(360deg);
     }
-}
-
-.header-text > p:not(.hero-intro) {
-
-    max-width: 690px;
-
-    color: var(--text-secondary);
-
-    font-size: 16px;
-
-    line-height: 1.9;
-
-    margin-bottom: 35px;
 }
 
 
