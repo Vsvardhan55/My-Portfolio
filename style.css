@@ -489,6 +489,10 @@ nav ul li a.active::after {
     }
 }
 
+.img-box::before {
+    animation: none;
+}
+
 
 /* =========================================================
    BUTTON + SOCIAL
