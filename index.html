@@ -2,188 +2,1929 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Sethu Vardhan Valluri - Software & AI Developer Portfolio"
+    >
+
+    <meta
+        name="author"
+        content="Sethu Vardhan Valluri"
+    >
 
     <title>Sethu Vardhan Valluri | Software & AI Developer</title>
 
-    <meta name="description"
-          content="Portfolio of Sethu Vardhan Valluri — Electronics and Communication Engineering graduate skilled in Full Stack Development, AI Applications, Embedded Systems, VLSI, Networking and Software Engineering.">
-
-    <meta name="keywords"
-          content="Sethu Vardhan Valluri, Vardhan, Full Stack Developer, Software Engineer, AI Developer, React Developer, Embedded Systems, VLSI, Verilog, Networking">
-
-    <meta name="author" content="Sethu Vardhan Valluri">
-
-    <!-- Remix Icons -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-        rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet"
     >
 
-    <!-- CSS -->
+    <!-- Remix Icons -->
     <link
-    rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet"
     >
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #05060b;
+            color: #f5f7ff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea {
+            font-family: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+
+        /* =========================================================
+           VARIABLES
+        ========================================================= */
+
+        :root {
+            --bg: #05060b;
+            --bg-soft: #090b13;
+            --bg-card: #0d101a;
+            --bg-card-2: #111522;
+
+            --text: #f5f7ff;
+            --text-soft: #a4aec3;
+            --text-muted: #737e94;
+
+            --cyan: #00e5ff;
+            --blue: #2196ff;
+            --purple: #7c4dff;
+            --violet: #9c6cff;
+            --pink: #ff3cac;
+            --magenta: #d946ef;
+
+            --gradient:
+                linear-gradient(
+                    120deg,
+                    var(--cyan),
+                    var(--blue),
+                    var(--purple),
+                    var(--pink)
+                );
+
+            --border: rgba(255, 255, 255, 0.09);
+
+            --shadow:
+                0 20px 60px rgba(0, 0, 0, 0.45);
+
+            --container: 1180px;
+        }
+
+
+        /* =========================================================
+           COMMON
+        ========================================================= */
+
+        .container {
+            width: min(92%, var(--container));
+            margin: 0 auto;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            padding: 110px 0;
+            overflow: hidden;
+            scroll-margin-top: 85px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-heading span {
+            display: inline-block;
+            color: var(--cyan);
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .section-heading h2 span {
+            display: inline;
+            font-size: inherit;
+            letter-spacing: normal;
+            text-transform: none;
+
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-heading p {
+            max-width: 680px;
+            margin: 18px auto 0;
+            color: var(--text-soft);
+            font-size: 1rem;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 78px;
+
+            z-index: 9999;
+
+            background:
+                rgba(5, 6, 11, 0.88);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        /* LOGO */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 1.65rem;
+            font-weight: 900;
+
+            white-space: nowrap;
+        }
+
+        .logo-v {
+            font-size: 2.1rem;
+
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text {
+            color: #ffffff;
+        }
+
+        /* NAVIGATION */
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-menu li a {
+            position: relative;
+
+            display: block;
+
+            padding: 9px 12px;
+
+            color: var(--text-soft);
+
+            font-size: 0.92rem;
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-menu li a::after {
+            content: "";
+
+            position: absolute;
+            left: 12px;
+            right: 12px;
+            bottom: 3px;
+
+            height: 2px;
+
+            background: var(--gradient);
+
+            transform: scaleX(0);
+            transform-origin: center;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            color: #ffffff;
+        }
+
+        .nav-menu li a:hover::after,
+        .nav-menu li a.active::after {
+            transform: scaleX(1);
+        }
+
+        /* MOBILE BUTTON */
+
+        .menu-btn {
+            display: none;
+
+            width: 44px;
+            height: 44px;
+
+            border: 1px solid var(--border);
+            border-radius: 12px;
+
+            background: var(--bg-card);
+
+            color: #ffffff;
+
+            font-size: 1.5rem;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           HOME
+        ========================================================= */
+
+        #home {
+            min-height: calc(100vh - 78px);
+
+            display: flex;
+            align-items: center;
+
+            padding: 70px 0 90px;
+
+            background:
+                radial-gradient(
+                    circle at 75% 45%,
+                    rgba(124, 77, 255, 0.12),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(0, 229, 255, 0.07),
+                    transparent 25%
+                );
+        }
+
+        .home-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.15fr)
+                minmax(360px, 0.85fr);
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+        .hero-intro {
+            color: #aab4c8;
+
+            font-size: 0.95rem;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 22px;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5.7rem);
+
+            font-weight: 900;
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 28px;
+        }
+
+        .gradient-name {
+            background: var(--gradient);
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-description {
+            max-width: 700px;
+
+            color: var(--text-soft);
+
+            font-size: 1.05rem;
+
+            line-height: 1.85;
+
+            margin-bottom: 34px;
+        }
+
+        .hero-buttons {
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            min-height: 50px;
+
+            padding: 0 20px;
+
+            border-radius: 13px;
+
+            font-size: 0.92rem;
+
+            font-weight: 800;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .btn-primary {
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #006dff,
+                    #7c4dff,
+                    #d946ef
+                );
+
+            box-shadow:
+                0 10px 30px rgba(124, 77, 255, 0.25);
+        }
+
+        .btn-secondary {
+            color: #ffffff;
+
+            border: 1px solid var(--border);
+
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary:hover {
+            box-shadow:
+                0 15px 40px rgba(124, 77, 255, 0.38);
+        }
+
+        .btn-secondary:hover {
+            border-color: rgba(0, 229, 255, 0.45);
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 46px;
+            height: 46px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 13px;
+
+            background: rgba(255, 255, 255, 0.025);
+
+            color: var(--text-soft);
+
+            font-size: 1.2rem;
+
+            transition: 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffffff;
+
+            border-color: var(--cyan);
+
+            background: rgba(0, 229, 255, 0.07);
+
+            transform: translateY(-4px);
+        }
+
+
+        /* =========================================================
+           PROFILE IMAGE
+        ========================================================= */
+
+        .home-image {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-box {
+            position: relative;
+
+            width: min(390px, 80vw);
+            aspect-ratio: 1 / 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            animation: profileFloat 4s ease-in-out infinite;
+        }
+
+        .img-box::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            border-radius: 50%;
+
+            background:
+                conic-gradient(
+                    from 180deg,
+                    var(--cyan),
+                    var(--blue),
+                    var(--purple),
+                    var(--pink),
+                    var(--cyan)
+                );
+
+            padding: 6px;
+
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+
+            -webkit-mask-composite: xor;
+
+            mask-composite: exclude;
+
+            filter:
+                drop-shadow(0 0 18px rgba(0, 229, 255, 0.22))
+                drop-shadow(0 0 25px rgba(217, 70, 239, 0.18));
+        }
+
+        .img-box::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 14px;
+
+            border-radius: 50%;
+
+            background: #070910;
+
+            z-index: -1;
+        }
+
+        .profile-image {
+            width: 86%;
+            height: 86%;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            border-radius: 50%;
+
+            filter: grayscale(100%);
+
+            border: 3px solid rgba(255, 255, 255, 0.06);
+
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes profileFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        #about {
+            background: var(--bg-soft);
+        }
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 0.85fr)
+                minmax(0, 1.15fr);
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .about-card {
+            padding: 35px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.045),
+                    rgba(255, 255, 255, 0.015)
+                );
+
+            box-shadow: var(--shadow);
+        }
+
+        .about-card h3 {
+            font-size: 1.8rem;
+
+            margin-bottom: 18px;
+        }
+
+        .about-card p {
+            color: var(--text-soft);
+
+            margin-bottom: 16px;
+        }
+
+        .about-details {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 14px;
+
+            margin-top: 25px;
+        }
+
+        .detail-box {
+            padding: 17px;
+
+            border-radius: 14px;
+
+            background: rgba(255, 255, 255, 0.035);
+
+            border: 1px solid var(--border);
+        }
+
+        .detail-box strong {
+            display: block;
+
+            color: #ffffff;
+
+            margin-bottom: 4px;
+        }
+
+        .detail-box span {
+            color: var(--text-muted);
+
+            font-size: 0.9rem;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+
+            margin-bottom: 18px;
+        }
+
+        .about-content p {
+            color: var(--text-soft);
+
+            margin-bottom: 18px;
+
+            font-size: 1rem;
+        }
+
+
+        /* =========================================================
+           EXPERIENCE
+        ========================================================= */
+
+        .experience-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 22px;
+        }
+
+        .experience-card {
+            position: relative;
+
+            padding: 30px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            background: var(--bg-card);
+
+            transition: 0.35s ease;
+
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 4px;
+            height: 100%;
+
+            background: var(--gradient);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-7px);
+
+            border-color: rgba(0, 229, 255, 0.2);
+
+            box-shadow: var(--shadow);
+        }
+
+        .experience-top {
+            display: flex;
+
+            align-items: flex-start;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 20px;
+        }
+
+        .experience-icon {
+            width: 52px;
+            height: 52px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            color: #ffffff;
+
+            font-size: 1.5rem;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 229, 255, 0.15),
+                    rgba(124, 77, 255, 0.2)
+                );
+
+            border: 1px solid rgba(0, 229, 255, 0.15);
+        }
+
+        .experience-card h3 {
+            font-size: 1.15rem;
+
+            margin-bottom: 5px;
+        }
+
+        .experience-company {
+            color: var(--cyan);
+
+            font-weight: 700;
+
+            font-size: 0.9rem;
+        }
+
+        .experience-date {
+            color: var(--text-muted);
+
+            font-size: 0.82rem;
+
+            white-space: nowrap;
+        }
+
+        .experience-card p {
+            color: var(--text-soft);
+
+            font-size: 0.94rem;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           PROJECTS
+        ========================================================= */
+
+        #projects {
+            background: var(--bg-soft);
+        }
+
+        .project-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 22px;
+        }
+
+        .project-card {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 28px;
+
+            min-height: 330px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            background: var(--bg-card);
+
+            overflow: hidden;
+
+            transition: 0.35s ease;
+        }
+
+        .project-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: -100px;
+            right: -100px;
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(124, 77, 255, 0.18),
+                    transparent 70%
+                );
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            border-color: rgba(124, 77, 255, 0.35);
+
+            box-shadow: var(--shadow);
+        }
+
+        .project-icon {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: rgba(0, 229, 255, 0.08);
+
+            border: 1px solid rgba(0, 229, 255, 0.14);
+
+            color: var(--cyan);
+
+            font-size: 1.45rem;
+
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: var(--text-soft);
+
+            font-size: 0.9rem;
+
+            line-height: 1.7;
+
+            flex: 1;
+        }
+
+        .project-tech {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 22px;
+        }
+
+        .project-tech span {
+            padding: 5px 9px;
+
+            border-radius: 7px;
+
+            color: #b9c6dc;
+
+            background: rgba(255, 255, 255, 0.04);
+
+            border: 1px solid var(--border);
+
+            font-size: 0.72rem;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           SKILLS
+        ========================================================= */
+
+        .skills-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+        .skill-box {
+            padding: 28px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            background: var(--bg-card);
+
+            transition: 0.3s ease;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(0, 229, 255, 0.25);
+        }
+
+        .skill-box h3 {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 20px;
+
+            font-size: 1.1rem;
+        }
+
+        .skill-box h3 i {
+            color: var(--cyan);
+
+            font-size: 1.35rem;
+        }
+
+        .skill-list {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 9px;
+        }
+
+        .skill-list span {
+            padding: 8px 11px;
+
+            border-radius: 9px;
+
+            color: #c2ccdd;
+
+            background: rgba(255, 255, 255, 0.035);
+
+            border: 1px solid var(--border);
+
+            font-size: 0.78rem;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           EDUCATION
+        ========================================================= */
+
+        #education {
+            background: var(--bg-soft);
+        }
+
+        .education-container {
+            max-width: 900px;
+
+            margin: auto;
+
+            display: grid;
+
+            gap: 18px;
+        }
+
+        .education-card {
+            display: grid;
+
+            grid-template-columns: 80px 1fr auto;
+
+            align-items: center;
+
+            gap: 25px;
+
+            padding: 25px 28px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            background: var(--bg-card);
+
+            transition: 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateX(5px);
+
+            border-color: rgba(124, 77, 255, 0.3);
+        }
+
+        .education-icon {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 16px;
+
+            color: #ffffff;
+
+            font-size: 1.5rem;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 229, 255, 0.12),
+                    rgba(124, 77, 255, 0.18)
+                );
+        }
+
+        .education-card h3 {
+            margin-bottom: 5px;
+
+            font-size: 1.08rem;
+        }
+
+        .education-card p {
+            color: var(--text-soft);
+
+            font-size: 0.9rem;
+        }
+
+        .education-year {
+            color: var(--cyan);
+
+            font-weight: 700;
+
+            font-size: 0.85rem;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================================================
+           CERTIFICATIONS
+        ========================================================= */
+
+        .certifications-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+        .certificate-card {
+            padding: 25px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            background: var(--bg-card);
+
+            transition: 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-6px);
+
+            border-color: rgba(217, 70, 239, 0.3);
+
+            box-shadow: var(--shadow);
+        }
+
+        .certificate-card > i {
+            display: flex;
+
+            width: 48px;
+            height: 48px;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 13px;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 229, 255, 0.13),
+                    rgba(217, 70, 239, 0.17)
+                );
+
+            font-size: 1.4rem;
+
+            margin-bottom: 18px;
+        }
+
+        .certificate-card h3 {
+            font-size: 1rem;
+
+            margin-bottom: 6px;
+        }
+
+        .certificate-card p {
+            color: var(--text-soft);
+
+            font-size: 0.85rem;
+        }
+
+        .certificate-type {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 5px 9px;
+
+            border-radius: 7px;
+
+            background: rgba(255, 255, 255, 0.04);
+
+            border: 1px solid var(--border);
+
+            color: var(--cyan);
+
+            font-size: 0.7rem;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        #contact {
+            background:
+                radial-gradient(
+                    circle at 50% 100%,
+                    rgba(124, 77, 255, 0.12),
+                    transparent 35%
+                );
+        }
+
+        .contact-container {
+            display: grid;
+
+            grid-template-columns:
+                0.8fr 1.2fr;
+
+            gap: 30px;
+
+            align-items: stretch;
+        }
+
+        .contact-box {
+            padding: 35px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            background: var(--bg-card);
+
+            box-shadow: var(--shadow);
+        }
+
+        .contact-box h3 {
+            font-size: 1.6rem;
+
+            margin-bottom: 12px;
+        }
+
+        .contact-box > p {
+            color: var(--text-soft);
+
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .contact-item:last-child {
+            border-bottom: 0;
+        }
+
+        .contact-item i {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 11px;
+
+            color: var(--cyan);
+
+            background: rgba(0, 229, 255, 0.07);
+
+            font-size: 1.2rem;
+        }
+
+        .contact-item small {
+            display: block;
+
+            color: var(--text-muted);
+
+            margin-bottom: 2px;
+        }
+
+        .contact-item a,
+        .contact-item span {
+            color: #e4e9f5;
+
+            font-size: 0.9rem;
+        }
+
+        .contact-form {
+            display: grid;
+
+            gap: 15px;
+        }
+
+        .form-group {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+
+            padding: 14px 16px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            outline: none;
+
+            background: rgba(255, 255, 255, 0.025);
+
+            color: #ffffff;
+
+            font-size: 0.9rem;
+
+            transition: 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--cyan);
+
+            background: rgba(0, 229, 255, 0.025);
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: fit-content;
+
+            border: none;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            padding: 28px 0;
+
+            border-top: 1px solid var(--border);
+
+            background: #030408;
+        }
+
+        .footer-content {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .footer-content p {
+            color: var(--text-muted);
+
+            font-size: 0.82rem;
+        }
+
+        .footer-content span {
+            color: var(--cyan);
+        }
+
+        .back-top {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            color: #ffffff;
+
+            transition: 0.3s ease;
+        }
+
+        .back-top:hover {
+            border-color: var(--cyan);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(25px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE - 1100
+        ========================================================= */
+
+        @media (max-width: 1100px) {
+
+            .nav-menu {
+                gap: 0;
+            }
+
+            .nav-menu li a {
+                padding: 8px 8px;
+
+                font-size: 0.82rem;
+            }
+
+            .home-grid {
+                gap: 40px;
+            }
+
+            .hero-title {
+                font-size: clamp(3rem, 6vw, 4.7rem);
+            }
+
+            .project-container,
+            .certifications-container {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            .skills-container {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+        }
+
+
+        /* =========================================================
+           RESPONSIVE - 850
+        ========================================================= */
+
+        @media (max-width: 850px) {
+
+            header {
+                height: 70px;
+            }
+
+            .nav-container {
+                height: 70px;
+            }
+
+            .menu-btn {
+                display: flex;
+
+                align-items: center;
+                justify-content: center;
+            }
+
+            .nav-menu {
+                position: absolute;
+
+                top: 70px;
+                left: 0;
+
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+
+                padding: 12px 5% 18px;
+
+                background:
+                    rgba(5, 6, 11, 0.98);
+
+                border-bottom: 1px solid var(--border);
+
+                transform: translateY(-120%);
+
+                opacity: 0;
+
+                pointer-events: none;
+
+                transition: 0.3s ease;
+            }
+
+            .nav-menu.open {
+                transform: translateY(0);
+
+                opacity: 1;
+
+                pointer-events: auto;
+            }
+
+            .nav-menu li a {
+                padding: 13px 10px;
+
+                font-size: 0.95rem;
+            }
+
+            .home-grid,
+            .about-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .home-grid {
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons,
+            .social-icons {
+                justify-content: center;
+            }
+
+            .home-image {
+                order: -1;
+            }
+
+            .img-box {
+                width: min(310px, 70vw);
+            }
+
+            .about-content {
+                text-align: center;
+            }
+
+            .experience-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /* =========================================================
+           RESPONSIVE - 650
+        ========================================================= */
+
+        @media (max-width: 650px) {
+
+            section {
+                padding: 80px 0;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .logo {
+                font-size: 1.35rem;
+            }
+
+            .logo-v {
+                font-size: 1.8rem;
+            }
+
+            #home {
+                min-height: auto;
+
+                padding-top: 60px;
+            }
+
+            .hero-title {
+                font-size: clamp(2.65rem, 13vw, 4rem);
+
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                font-size: 0.93rem;
+            }
+
+            .project-container,
+            .skills-container,
+            .certifications-container {
+                grid-template-columns: 1fr;
+            }
+
+            .education-card {
+                grid-template-columns: 60px 1fr;
+
+                gap: 16px;
+
+                padding: 20px;
+            }
+
+            .education-year {
+                grid-column: 2;
+
+                margin-top: -10px;
+            }
+
+            .form-group {
+                grid-template-columns: 1fr;
+            }
+
+            .about-details {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+
+                text-align: center;
+            }
+        }
+
+
+        /* =========================================================
+           RESPONSIVE - 450
+        ========================================================= */
+
+        @media (max-width: 450px) {
+
+            .hero-title {
+                font-size: 2.65rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .social-icons {
+                gap: 7px;
+            }
+
+            .social-icons a {
+                width: 43px;
+                height: 43px;
+            }
+
+            .experience-card {
+                padding: 23px;
+            }
+
+            .experience-top {
+                flex-direction: column;
+            }
+
+            .experience-date {
+                white-space: normal;
+            }
+
+            .contact-box {
+                padding: 24px;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<!-- =========================================================
-     HEADER / HERO
-========================================================= -->
 
-<div id="header">
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
 
-    <div class="container">
+    <header id="header">
 
-        <!-- NAVIGATION -->
+        <div class="container nav-container">
 
-        <nav class="animated">
+            <a href="#home" class="logo">
 
-            <a href="#header" class="brand">
-                <img src="images/logo.png" class="logo" alt="Vardhan Logo">
+                <span class="logo-v">V</span>
+
+                <span class="logo-text">
+                    Vardhan
+                </span>
+
             </a>
 
-            <ul>
-                <li>
-                    <a href="#header" class="active">Home</a>
-                </li>
 
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-
-        </nav>
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open navigation menu"
+            >
+                <i class="ri-menu-3-line"></i>
+            </button>
 
 
-        <!-- HERO -->
+            <nav>
 
-        <section class="home animated">
+                <ul class="nav-menu" id="navMenu">
 
-            <div class="header-text">
-
-                <p class="hero-intro">
-                    Electronics & Communication Engineering Graduate
-                </p>
-
-                <h1>
-                    Hi, I'm <span>Vardhan</span>
-                    <br>
-                    Software & AI Developer
-                </h1>
-
-                <p>
-                    I build practical software and AI applications while
-                    developing strong foundations in embedded systems, VLSI,
-                    networking and digital technologies. I enjoy breaking down
-                    complex problems, designing solutions and turning ideas
-                    into working applications.
-                </p>
-
-
-                <div class="downlord-social">
-
-                    <!-- Resume -->
-
-                    <a
-                        href="https://drive.google.com/file/d/1AoodZG6_cYLWPCPbKWUKM4_8RC0ip_EP/view?usp=drivesdk"
-                        class="btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <i class="ri-file-download-line"></i>
-                        Download Resume
-                    </a>
-
-
-                    <!-- Social Links -->
-
-                    <div class="social-icons">
-
-                        <a
-                            href="https://github.com/Vsvardhan55"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub"
-                        >
-                            <i class="ri-github-fill"></i>
+                    <li>
+                        <a href="#home" class="active">
+                            Home
                         </a>
+                    </li>
 
-                        <a
-                            href="https://www.linkedin.com/in/sethu-vardhan-valluri"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn"
-                        >
-                            <i class="ri-linkedin-fill"></i>
+                    <li>
+                        <a href="#about">
+                            About
                         </a>
+                    </li>
 
-                        <a
-                            href="mailto:vardhanvalluri5@gmail.com"
-                            aria-label="Email"
-                        >
-                            <i class="ri-mail-fill"></i>
+                    <li>
+                        <a href="#experience">
+                            Experience
                         </a>
+                    </li>
 
-                        <a
-                            href="https://www.instagram.com/vsvardhan_chowdhary/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Instagram"
-                        >
-                            <i class="ri-instagram-fill"></i>
+                    <li>
+                        <a href="#projects">
+                            Projects
                         </a>
+                    </li>
+
+                    <li>
+                        <a href="#skills">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#education">
+                            Education
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#certifications">
+                            Certifications
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         HOME
+    ========================================================= -->
+
+    <main>
+
+        <section id="home">
+
+            <div class="container">
+
+                <div class="home-grid">
+
+
+                    <div class="home-content reveal">
+
+                        <p class="hero-intro">
+                            Electronics & Communication Engineering Graduate
+                        </p>
+
+
+                        <h1 class="hero-title">
+
+                            Hi, I'm
+                            <span class="gradient-name">
+                                Vardhan
+                            </span>
+
+                            <br>
+
+                            Software & AI
+                            <br>
+
+                            Developer
+
+                        </h1>
+
+
+                        <p class="hero-description">
+
+                            I build practical software and AI applications
+                            while developing strong foundations in embedded
+                            systems, VLSI, networking and digital technologies.
+                            I enjoy breaking down complex problems, designing
+                            solutions and turning ideas into working
+                            applications.
+
+                        </p>
+
+
+                        <div class="hero-buttons">
+
+                            <a
+                                href="assets/Vardhan_Resume.pdf"
+                                class="btn btn-primary"
+                                target="_blank"
+                            >
+                                <i class="ri-file-download-line"></i>
+
+                                Download Resume
+                            </a>
+
+                            <a
+                                href="#contact"
+                                class="btn btn-secondary"
+                            >
+                                <i class="ri-send-plane-line"></i>
+
+                                Contact Me
+                            </a>
+
+                        </div>
+
+
+                        <div class="social-icons">
+
+                            <a
+                                href="https://github.com/Vsvardhan55"
+                                target="_blank"
+                                aria-label="GitHub"
+                            >
+                                <i class="ri-github-fill"></i>
+                            </a>
+
+
+                            <a
+                                href="https://www.linkedin.com/in/sethu-vardhan-valluri/"
+                                target="_blank"
+                                aria-label="LinkedIn"
+                            >
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+
+
+                            <a
+                                href="mailto:vardhan.valluri@sasi.ac.in"
+                                aria-label="Email"
+                            >
+                                <i class="ri-mail-line"></i>
+                            </a>
+
+
+                            <a
+                                href="https://www.instagram.com/vsvardhan_chowdhary/"
+                                target="_blank"
+                                aria-label="Instagram"
+                            >
+                                <i class="ri-instagram-line"></i>
+                            </a>
+
+                        </div>
 
                     </div>
 
-                </div>
-
-            </div>
 
 
-            <!-- HERO IMAGE -->
+                    <div class="home-image reveal">
 
-            <div class="home-img">
+                        <div class="img-box">
 
-                <div class="img-box">
+                            <!--
+                                IMPORTANT:
+                                Put your profile image here:
+                                assets/profile.png
+                            -->
 
-                    <img
-                        src="images/vardhan5.png"
-                        alt="Sethu Vardhan Valluri"
-                    >
+                            <img
+                                src="assets/profile.png"
+                                alt="Sethu Vardhan Valluri"
+                                class="profile-image"
+                            >
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
@@ -191,1482 +1932,1561 @@
 
         </section>
 
-    </div>
-
-</div>
 
 
-<!-- =========================================================
-     ABOUT
-========================================================= -->
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
 
-<section id="about">
+        <section id="about">
 
-    <div class="section-title">
-        <h2>About Me</h2>
-    </div>
+            <div class="container">
 
+                <div class="section-heading reveal">
 
-    <div class="internship-container">
+                    <span>About Me</span>
 
-        <div class="internship-card">
+                    <h2>
+                        Building ideas into
+                        <span>working solutions.</span>
+                    </h2>
 
-            <h3>
-                <i class="ri-user-3-line"></i>
-                Who I Am
-            </h3>
+                    <p>
+                        A combination of software development,
+                        AI application development and electronics
+                        engineering foundations.
+                    </p>
 
-            <p>
-                I am a 2026 Electronics and Communication Engineering graduate
-                with a CGPA of 7.83/10 and hands-on experience across software
-                development, artificial intelligence, embedded systems,
-                VLSI design and computer networking.
-            </p>
-
-        </div>
+                </div>
 
 
-        <div class="internship-card">
-
-            <h3>
-                <i class="ri-lightbulb-line"></i>
-                What I Do
-            </h3>
-
-            <p>
-                I develop full-stack applications, REST APIs and AI-powered
-                solutions using modern technologies such as React.js,
-                Next.js, Angular, Node.js, FastAPI, PostgreSQL, MongoDB and
-                Ollama.
-            </p>
-
-        </div>
+                <div class="about-grid">
 
 
-        <div class="internship-card">
+                    <div class="about-card reveal">
 
-            <h3>
-                <i class="ri-cpu-line"></i>
-                Hardware & Systems
-            </h3>
+                        <h3>
+                            Who I Am
+                        </h3>
 
-            <p>
-                My ECE background includes Verilog HDL, RTL design, AMBA
-                protocols, AHB/APB, embedded systems, STM32, digital
-                electronics, IoT and semiconductor device simulation.
-            </p>
+                        <p>
+                            I am a recent B.Tech graduate in Electronics
+                            and Communication Engineering with an interest
+                            in software development, AI applications,
+                            embedded systems, networking and VLSI.
+                        </p>
 
-        </div>
-
-
-        <div class="internship-card">
-
-            <h3>
-                <i class="ri-bar-chart-box-line"></i>
-                Problem Solving
-            </h3>
-
-            <p>
-                I enjoy analyzing problems, breaking requirements into
-                manageable components, debugging systems and communicating
-                technical findings through projects, documentation and
-                presentations.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+                        <p>
+                            I enjoy learning new technologies and applying
+                            them through practical projects, internships
+                            and technical challenges.
+                        </p>
 
 
-<!-- =========================================================
-     EXPERIENCE
-========================================================= -->
+                        <div class="about-details">
 
-<section id="experience">
+                            <div class="detail-box">
+                                <strong>Degree</strong>
+                                <span>B.Tech - ECE</span>
+                            </div>
 
-    <div class="section-title">
-        <h2>Experience</h2>
-    </div>
+                            <div class="detail-box">
+                                <strong>CGPA</strong>
+                                <span>7.83 / 10</span>
+                            </div>
+
+                            <div class="detail-box">
+                                <strong>Location</strong>
+                                <span>India</span>
+                            </div>
+
+                            <div class="detail-box">
+                                <strong>Focus</strong>
+                                <span>Software & AI</span>
+                            </div>
+
+                        </div>
+
+                    </div>
 
 
-    <div class="experience-container">
+                    <div class="about-content reveal">
 
+                        <h3>
+                            My Technical Direction
+                        </h3>
 
-        <!-- EXPERIENCE 1 -->
+                        <p>
+                            My current focus is on developing full-stack
+                            web applications and AI-powered applications
+                            using technologies such as React, Angular,
+                            Next.js, Node.js, FastAPI, Python and
+                            PostgreSQL/MongoDB.
+                        </p>
 
-        <div class="experience-card">
+                        <p>
+                            Along with software development, my ECE
+                            background gives me exposure to digital
+                            electronics, embedded systems, networking,
+                            VLSI, Verilog HDL and hardware-oriented
+                            problem solving.
+                        </p>
 
-            <div class="experience-icon">
-                <i class="ri-code-box-line"></i>
-            </div>
+                        <p>
+                            I am interested in opportunities where I can
+                            contribute to real-world applications while
+                            continuously improving my engineering skills.
+                        </p>
 
-            <div class="experience-content">
-
-                <span class="experience-date">
-                    Dec 2025 – Mar 2026
-                </span>
-
-                <h3>
-                    Web Development & Cloud Integration Intern
-                </h3>
-
-                <h4>
-                    SkillDzire
-                </h4>
-
-                <p>
-                    Worked on web application development using modern
-                    frontend and backend technologies while gaining exposure
-                    to cloud integration, deployment and software development
-                    workflows.
-                </p>
-
-                <div class="tech-stack">
-
-                    <span>JavaScript</span>
-                    <span>Web Development</span>
-                    <span>Cloud</span>
-                    <span>REST APIs</span>
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <!-- EXPERIENCE 2 -->
 
-        <div class="experience-card">
+        <!-- =====================================================
+             EXPERIENCE
+        ====================================================== -->
 
-            <div class="experience-icon">
-                <i class="ri-cpu-line"></i>
-            </div>
+        <section id="experience">
 
-            <div class="experience-content">
+            <div class="container">
 
-                <span class="experience-date">
-                    Jun 2025 – Jul 2025
-                </span>
+                <div class="section-heading reveal">
 
-                <h3>
-                    VLSI Design Intern
-                </h3>
+                    <span>Experience</span>
 
-                <h4>
-                    Maven Silicon
-                </h4>
+                    <h2>
+                        Internships &
+                        <span>Training</span>
+                    </h2>
 
-                <p>
-                    Worked on RTL design and digital hardware development
-                    using Verilog HDL and AMBA protocols. Designed and
-                    verified an AHB-to-APB bridge through RTL implementation,
-                    simulation and waveform analysis.
-                </p>
+                    <p>
+                        Practical exposure across software, embedded
+                        systems and VLSI technologies.
+                    </p>
 
-                <div class="tech-stack">
+                </div>
 
-                    <span>Verilog</span>
-                    <span>RTL</span>
-                    <span>AMBA</span>
-                    <span>AHB</span>
-                    <span>APB</span>
+
+                <div class="experience-container">
+
+
+                    <article class="experience-card reveal">
+
+                        <div class="experience-top">
+
+                            <div style="display:flex;gap:15px;">
+
+                                <div class="experience-icon">
+                                    <i class="ri-cpu-line"></i>
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Embedded Systems Developer
+                                    </h3>
+
+                                    <div class="experience-company">
+                                        Microchip / EduSkills / AICTE
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="experience-date">
+                                Virtual Internship
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Developed foundational knowledge of embedded
+                            systems, microcontroller-based development,
+                            embedded programming, hardware interfacing
+                            and IoT-oriented applications.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="experience-card reveal">
+
+                        <div class="experience-top">
+
+                            <div style="display:flex;gap:15px;">
+
+                                <div class="experience-icon">
+                                    <i class="ri-cpu-line"></i>
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        VLSI Virtual Internship
+                                    </h3>
+
+                                    <div class="experience-company">
+                                        SkillDzire / AICTE
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="experience-date">
+                                Virtual Internship
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Gained practical exposure to VLSI concepts,
+                            digital circuit design, RTL concepts and
+                            hardware-oriented development.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="experience-card reveal">
+
+                        <div class="experience-top">
+
+                            <div style="display:flex;gap:15px;">
+
+                                <div class="experience-icon">
+                                    <i class="ri-code-box-line"></i>
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Full Stack Developer
+                                    </h3>
+
+                                    <div class="experience-company">
+                                        SmartInternz
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="experience-date">
+                                2025
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Worked with full-stack web development concepts
+                            using the MERN stack, including frontend,
+                            backend, database integration and REST APIs.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="experience-card reveal">
+
+                        <div class="experience-top">
+
+                            <div style="display:flex;gap:15px;">
+
+                                <div class="experience-icon">
+                                    <i class="ri-git-branch-line"></i>
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Frontend VLSI Design
+                                    </h3>
+
+                                    <div class="experience-company">
+                                        Maven Silicon
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="experience-date">
+                                Jun - Jul 2025
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Worked on an AHB-to-APB Bridge project involving
+                            RTL design, AMBA protocol concepts, FSM design,
+                            read/write transactions and verification.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="experience-card reveal">
+
+                        <div class="experience-top">
+
+                            <div style="display:flex;gap:15px;">
+
+                                <div class="experience-icon">
+                                    <i class="ri-code-s-slash-line"></i>
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Full Stack Java Development
+                                    </h3>
+
+                                    <div class="experience-company">
+                                        SkillDzire
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="experience-date">
+                                2025 - 2026
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Developed knowledge of Java-based application
+                            development, Spring Boot, web development,
+                            REST APIs and cloud-oriented application
+                            deployment.
+                        </p>
+
+                    </article>
+
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <!-- EXPERIENCE 3 -->
 
-        <div class="experience-card">
+        <!-- =====================================================
+             PROJECTS
+        ====================================================== -->
 
-            <div class="experience-icon">
-                <i class="ri-terminal-box-line"></i>
-            </div>
+        <section id="projects">
 
-            <div class="experience-content">
+            <div class="container">
 
-                <span class="experience-date">
-                    May 2025 – Jun 2025
-                </span>
+                <div class="section-heading reveal">
 
-                <h3>
-                    Full Stack Developer Intern
-                </h3>
+                    <span>Projects</span>
 
-                <h4>
-                    SmartInternz
-                </h4>
+                    <h2>
+                        Things I've
+                        <span>Built</span>
+                    </h2>
 
-                <p>
-                    Worked with MongoDB, Express.js, React.js and Node.js
-                    to develop full-stack applications, integrate REST APIs,
-                    connect databases and implement frontend workflows.
-                </p>
+                    <p>
+                        Practical applications combining software,
+                        AI, backend systems and engineering concepts.
+                    </p>
 
-                <div class="tech-stack">
+                </div>
 
-                    <span>MongoDB</span>
-                    <span>Express</span>
-                    <span>React</span>
-                    <span>Node.js</span>
+
+                <div class="project-container">
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-icon">
+                            <i class="ri-database-2-line"></i>
+                        </div>
+
+                        <h3>
+                            Product Browser Backend
+                        </h3>
+
+                        <p>
+                            FastAPI and PostgreSQL backend designed to
+                            handle a large product dataset with efficient
+                            API-based product retrieval and pagination.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>FastAPI</span>
+                            <span>Python</span>
+                            <span>PostgreSQL</span>
+                            <span>REST API</span>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-icon">
+                            <i class="ri-brain-line"></i>
+                        </div>
+
+                        <h3>
+                            Trinethra Feedback Analyzer
+                        </h3>
+
+                        <p>
+                            AI-powered supervisor feedback analysis system
+                            that processes transcripts, extracts evidence,
+                            maps KPIs and generates suggested scoring and
+                            follow-up questions.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>Ollama</span>
+                            <span>LLM</span>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-icon">
+                            <i class="ri-customer-service-2-line"></i>
+                        </div>
+
+                        <h3>
+                            ResolveNow
+                        </h3>
+
+                        <p>
+                            Online complaint management application with
+                            authentication, role-based dashboards,
+                            complaint tracking and management workflows.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>REST API</span>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-icon">
+                            <i class="ri-cpu-line"></i>
+                        </div>
+
+                        <h3>
+                            AHB to APB Bridge
+                        </h3>
+
+                        <p>
+                            RTL implementation of an AHB slave to APB master
+                            bridge using Verilog HDL, including FSM control,
+                            address decoding, read/write transactions and
+                            protocol handshaking.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>Verilog</span>
+                            <span>AMBA</span>
+                            <span>AHB</span>
+                            <span>APB</span>
+                            <span>RTL</span>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-icon">
+                            <i class="ri-sparkling-2-line"></i>
+                        </div>
+
+                        <h3>
+                            Elya AI Assistant
+                        </h3>
+
+                        <p>
+                            AI assistant application using Angular,
+                            Node.js, Express, MongoDB and Ollama with
+                            authentication and conversational AI features.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>Angular</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Ollama</span>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-icon">
+                            <i class="ri-shield-check-line"></i>
+                        </div>
+
+                        <h3>
+                            PharmaGuard AI
+                        </h3>
+
+                        <p>
+                            AI-assisted pharmaceutical complaint management
+                            application using a React frontend and FastAPI
+                            backend with LangGraph and LLM integration.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Redux</span>
+                            <span>FastAPI</span>
+                            <span>LangGraph</span>
+                            <span>PostgreSQL</span>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-icon">
+                            <i class="ri-user-settings-line"></i>
+                        </div>
+
+                        <h3>
+                            Student Management System
+                        </h3>
+
+                        <p>
+                            Java and Spring-based student management
+                            application designed to manage student
+                            information and application workflows.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>REST API</span>
+                            <span>SQL</span>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-icon">
+                            <i class="ri-flask-line"></i>
+                        </div>
+
+                        <h3>
+                            TFET Device Analysis
+                        </h3>
+
+                        <p>
+                            Academic semiconductor device study involving
+                            simulation and analysis of electrical
+                            characteristics of tunnel field-effect
+                            transistor structures using TCAD.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>TCAD</span>
+                            <span>Semiconductor</span>
+                            <span>TFET</span>
+                            <span>Simulation</span>
+                        </div>
+
+                    </article>
+
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <!-- EXPERIENCE 4 -->
 
-        <div class="experience-card">
+        <!-- =====================================================
+             SKILLS
+        ====================================================== -->
 
-            <div class="experience-icon">
-                <i class="ri-microchip-line"></i>
-            </div>
+        <section id="skills">
 
-            <div class="experience-content">
+            <div class="container">
 
-                <span class="experience-date">
-                    Virtual Internship
-                </span>
+                <div class="section-heading reveal">
 
-                <h3>
-                    Embedded Systems Developer
-                </h3>
+                    <span>Technical Skills</span>
 
-                <h4>
-                    Microchip / EduSkills
-                </h4>
+                    <h2>
+                        My
+                        <span>Toolkit</span>
+                    </h2>
 
-                <p>
-                    Developed foundational knowledge of embedded systems,
-                    microcontroller-based development, embedded programming,
-                    hardware interfacing and IoT-oriented applications.
-                </p>
+                </div>
 
-                <div class="tech-stack">
 
-                    <span>Embedded Systems</span>
-                    <span>C</span>
-                    <span>Microcontrollers</span>
-                    <span>IoT</span>
+                <div class="skills-container">
+
+
+                    <div class="skill-box reveal">
+
+                        <h3>
+                            <i class="ri-code-s-slash-line"></i>
+                            Programming
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>C</span>
+                            <span>Embedded-C</span>
+                            <span>Python</span>
+                            <span>Java</span>
+                            <span>JavaScript</span>
+                            <span>TypeScript</span>
+                            <span>Verilog HDL</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill-box reveal">
+
+                        <h3>
+                            <i class="ri-layout-4-line"></i>
+                            Frontend
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>React.js</span>
+                            <span>Next.js</span>
+                            <span>Angular</span>
+                            <span>Tailwind CSS</span>
+                            <span>Bootstrap</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill-box reveal">
+
+                        <h3>
+                            <i class="ri-server-line"></i>
+                            Backend
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>FastAPI</span>
+                            <span>Spring Boot</span>
+                            <span>REST APIs</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill-box reveal">
+
+                        <h3>
+                            <i class="ri-database-2-line"></i>
+                            Databases
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>PostgreSQL</span>
+                            <span>MongoDB</span>
+                            <span>MySQL</span>
+                            <span>SQL</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill-box reveal">
+
+                        <h3>
+                            <i class="ri-brain-line"></i>
+                            AI & LLM
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>Ollama</span>
+                            <span>LLM Integration</span>
+                            <span>Prompt Engineering</span>
+                            <span>AI Applications</span>
+                            <span>LangGraph</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill-box reveal">
+
+                        <h3>
+                            <i class="ri-router-line"></i>
+                            Networking
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>OSI Model</span>
+                            <span>TCP/IP</span>
+                            <span>IPv4/IPv6</span>
+                            <span>Subnetting</span>
+                            <span>VLAN</span>
+                            <span>DNS</span>
+                            <span>VPN</span>
+                            <span>Routing</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill-box reveal">
+
+                        <h3>
+                            <i class="ri-cpu-line"></i>
+                            VLSI & Embedded
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>RTL Design</span>
+                            <span>Verilog</span>
+                            <span>AMBA</span>
+                            <span>AHB</span>
+                            <span>APB</span>
+                            <span>Digital Electronics</span>
+                            <span>Embedded Systems</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill-box reveal">
+
+                        <h3>
+                            <i class="ri-tools-line"></i>
+                            Tools
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>VS Code</span>
+                            <span>Postman</span>
+                            <span>Vivado</span>
+                            <span>Arduino IDE</span>
+                            <span>STM32CubeIDE</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill-box reveal">
+
+                        <h3>
+                            <i class="ri-cloud-line"></i>
+                            Deployment
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>Vercel</span>
+                            <span>Netlify</span>
+                            <span>Render</span>
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <!-- EXPERIENCE 5 -->
 
-        <div class="experience-card">
+        <!-- =====================================================
+             EDUCATION
+        ====================================================== -->
 
-            <div class="experience-icon">
-                <i class="ri-cpu-fill"></i>
-            </div>
+        <section id="education">
 
-            <div class="experience-content">
+            <div class="container">
 
-                <span class="experience-date">
-                    Virtual Internship
-                </span>
+                <div class="section-heading reveal">
 
-                <h3>
-                    VLSI Virtual Internship
-                </h3>
+                    <span>Education</span>
 
-                <h4>
-                    SkillDzire / AICTE
-                </h4>
+                    <h2>
+                        Academic
+                        <span>Journey</span>
+                    </h2>
 
-                <p>
-                    Developed foundational knowledge of VLSI design
-                    principles, digital circuit design and hardware design
-                    workflows.
-                </p>
+                </div>
 
-                <div class="tech-stack">
 
-                    <span>VLSI</span>
-                    <span>Digital Design</span>
-                    <span>RTL</span>
+                <div class="education-container">
+
+
+                    <div class="education-card reveal">
+
+                        <div class="education-icon">
+                            <i class="ri-graduation-cap-line"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                B.Tech - Electronics & Communication Engineering
+                            </h3>
+
+                            <p>
+                                Sasi Institute of Technology and Engineering
+                            </p>
+
+                            <p>
+                                CGPA: 7.83 / 10
+                            </p>
+
+                        </div>
+
+                        <div class="education-year">
+                            2022 - 2026
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="education-card reveal">
+
+                        <div class="education-icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Intermediate - MPC
+                            </h3>
+
+                            <p>
+                                Pragati Junior College, Tanuku
+                            </p>
+
+                            <p>
+                                80.6%
+                            </p>
+
+                        </div>
+
+                        <div class="education-year">
+                            2020 - 2022
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="education-card reveal">
+
+                        <div class="education-icon">
+                            <i class="ri-school-line"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                SSC
+                            </h3>
+
+                            <p>
+                                Montessori Residential / High School
+                            </p>
+
+                            <p>
+                                CGPA: 8.3
+                            </p>
+
+                        </div>
+
+                        <div class="education-year">
+                            2019 - 2020
+                        </div>
+
+                    </div>
+
 
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-<!-- =========================================================
-     FEATURED PROJECTS
-========================================================= -->
 
-<section id="projects">
+        <!-- =====================================================
+             CERTIFICATIONS
+        ====================================================== -->
 
-    <div class="section-title">
-        <h2>Featured Projects</h2>
-    </div>
+        <section id="certifications">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <span>Certifications</span>
+
+                    <h2>
+                        Learning &
+                        <span>Credentials</span>
+                    </h2>
+
+                </div>
 
 
-    <div class="project-container">
+                <div class="certifications-container">
 
 
-        <!-- PROJECT 1 -->
+                    <div class="certificate-card reveal">
 
-        <div class="project-card">
+                        <i class="ri-code-s-slash-line"></i>
 
-            <div class="project-icon">
-                <i class="ri-capsule-line"></i>
+                        <h3>
+                            Full Stack Java Development
+                        </h3>
+
+                        <p>
+                            SkillDzire
+                        </p>
+
+                        <span class="certificate-type">
+                            Development
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="certificate-card reveal">
+
+                        <i class="ri-cloud-line"></i>
+
+                        <h3>
+                            Web Development & Cloud Integration
+                        </h3>
+
+                        <p>
+                            SkillDzire / APSCHE
+                        </p>
+
+                        <span class="certificate-type">
+                            Virtual Internship
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="certificate-card reveal">
+
+                        <i class="ri-sparkling-2-line"></i>
+
+                        <h3>
+                            Generative AI in Action
+                        </h3>
+
+                        <p>
+                            IBM SkillsBuild
+                        </p>
+
+                        <span class="certificate-type">
+                            AI
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="certificate-card reveal">
+
+                        <i class="ri-cloud-line"></i>
+
+                        <h3>
+                            Cloud Computing Virtual Internship
+                        </h3>
+
+                        <p>
+                            AWS Academy / EduSkills
+                        </p>
+
+                        <span class="certificate-type">
+                            Virtual Internship
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="certificate-card reveal">
+
+                        <i class="ri-router-line"></i>
+
+                        <h3>
+                            Networking Basics
+                        </h3>
+
+                        <p>
+                            Cisco
+                        </p>
+
+                        <span class="certificate-type">
+                            Networking
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="certificate-card reveal">
+
+                        <i class="ri-cpu-line"></i>
+
+                        <h3>
+                            Microchip Embedded System Developer
+                        </h3>
+
+                        <p>
+                            EduSkills / AICTE
+                        </p>
+
+                        <span class="certificate-type">
+                            Virtual Internship
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="certificate-card reveal">
+
+                        <i class="ri-cpu-line"></i>
+
+                        <h3>
+                            VLSI Virtual Internship
+                        </h3>
+
+                        <p>
+                            SkillDzire / AICTE
+                        </p>
+
+                        <span class="certificate-type">
+                            Virtual Internship
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="certificate-card reveal">
+
+                        <i class="ri-code-box-line"></i>
+
+                        <h3>
+                            Java Programming for Beginners
+                        </h3>
+
+                        <p>
+                            SkillUp by Simplilearn
+                        </p>
+
+                        <span class="certificate-type">
+                            Programming
+                        </span>
+
+                    </div>
+
+
+                </div>
+
             </div>
 
-            <h3>
-                PharmaGuard AI
-            </h3>
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section id="contact">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <span>Contact</span>
+
+                    <h2>
+                        Let's
+                        <span>Connect</span>
+                    </h2>
+
+                    <p>
+                        Interested in discussing an opportunity,
+                        project or collaboration?
+                    </p>
+
+                </div>
+
+
+                <div class="contact-container">
+
+
+                    <div class="contact-box reveal">
+
+                        <h3>
+                            Get in touch
+                        </h3>
+
+                        <p>
+                            Feel free to reach out for opportunities,
+                            technical discussions or collaborations.
+                        </p>
+
+
+                        <div class="contact-item">
+
+                            <i class="ri-mail-line"></i>
+
+                            <div>
+
+                                <small>Email</small>
+
+                                <a href="mailto:vardhan.valluri@sasi.ac.in">
+                                    vardhan.valluri@sasi.ac.in
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <i class="ri-github-line"></i>
+
+                            <div>
+
+                                <small>GitHub</small>
+
+                                <a
+                                    href="https://github.com/Vsvardhan55"
+                                    target="_blank"
+                                >
+                                    github.com/Vsvardhan55
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <i class="ri-linkedin-line"></i>
+
+                            <div>
+
+                                <small>LinkedIn</small>
+
+                                <a
+                                    href="https://www.linkedin.com/in/sethu-vardhan-valluri/"
+                                    target="_blank"
+                                >
+                                    LinkedIn Profile
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="contact-box reveal">
+
+                        <form
+                            class="contact-form"
+                            id="contactForm"
+                        >
+
+                            <div class="form-group">
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="Your Name"
+                                    required
+                                >
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Your Email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <input
+                                type="text"
+                                id="subject"
+                                placeholder="Subject"
+                                required
+                            >
+
+
+                            <textarea
+                                id="message"
+                                placeholder="Your Message"
+                                required
+                            ></textarea>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+
+                                <i class="ri-send-plane-line"></i>
+
+                                Send Message
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="container footer-content">
 
             <p>
-                AI-powered pharmaceutical complaint management platform
-                with authentication, complaint CRUD, document uploads,
-                REST APIs and AI-assisted complaint analysis.
+                © 2026
+                <span>Sethu Vardhan Valluri</span>.
+                All rights reserved.
             </p>
 
-            <div class="tech-stack">
-
-                <span>React</span>
-                <span>FastAPI</span>
-                <span>PostgreSQL</span>
-                <span>Ollama</span>
-
-            </div>
-
             <a
-                href="https://github.com/Vsvardhan55/PharmaGuard-AI"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#home"
+                class="back-top"
+                aria-label="Back to top"
             >
-                View Project
-                <i class="ri-arrow-right-up-line"></i>
+                <i class="ri-arrow-up-line"></i>
             </a>
 
         </div>
 
+    </footer>
 
-        <!-- PROJECT 2 -->
 
-        <div class="project-card">
 
-            <div class="project-icon">
-                <i class="ri-robot-2-line"></i>
-            </div>
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
 
-            <h3>
-                ELYA AI Assistant
-            </h3>
+    <script>
 
-            <p>
-                AI conversational assistant built with Angular, Node.js,
-                Express.js, MongoDB and Ollama featuring chat history,
-                document understanding and AI-generated responses.
-            </p>
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
 
-            <div class="tech-stack">
+        const menuBtn = document.getElementById("menuBtn");
+        const navMenu = document.getElementById("navMenu");
 
-                <span>Angular</span>
-                <span>Node.js</span>
-                <span>MongoDB</span>
-                <span>Ollama</span>
+        menuBtn.addEventListener("click", () => {
 
-            </div>
+            navMenu.classList.toggle("open");
 
-            <a
-                href="https://github.com/Vsvardhan55/ELYA-AI"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Project
-                <i class="ri-arrow-right-up-line"></i>
-            </a>
+            const icon = menuBtn.querySelector("i");
 
-        </div>
+            if (navMenu.classList.contains("open")) {
 
+                icon.className = "ri-close-line";
 
-        <!-- PROJECT 3 -->
+            } else {
 
-        <div class="project-card">
+                icon.className = "ri-menu-3-line";
 
-            <div class="project-icon">
-                <i class="ri-shopping-bag-3-line"></i>
-            </div>
-
-            <h3>
-                Helium Personalization Engine
-            </h3>
-
-            <p>
-                AI-powered e-commerce personalization application designed
-                to classify shoppers, generate personalized experiences and
-                support product recommendation workflows.
-            </p>
-
-            <div class="tech-stack">
-
-                <span>Next.js</span>
-                <span>TypeScript</span>
-                <span>Tailwind</span>
-                <span>Ollama</span>
-
-            </div>
-
-            <a
-                href="https://github.com/Vsvardhan55/helium-personalization-engine"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Project
-                <i class="ri-arrow-right-up-line"></i>
-            </a>
-
-        </div>
-
-
-        <!-- PROJECT 4 -->
-
-        <div class="project-card">
-
-            <div class="project-icon">
-                <i class="ri-database-2-line"></i>
-            </div>
-
-            <h3>
-                Product Browser Backend
-            </h3>
-
-            <p>
-                REST API backend supporting search, filtering, sorting and
-                pagination across 200,000+ products using FastAPI and
-                PostgreSQL.
-            </p>
-
-            <div class="tech-stack">
-
-                <span>Python</span>
-                <span>FastAPI</span>
-                <span>PostgreSQL</span>
-                <span>REST API</span>
-
-            </div>
-
-            <a
-                href="https://github.com/Vsvardhan55/product-browser-backend"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Project
-                <i class="ri-arrow-right-up-line"></i>
-            </a>
-
-        </div>
-
-
-        <!-- PROJECT 5 -->
-
-        <div class="project-card">
-
-            <div class="project-icon">
-                <i class="ri-customer-service-2-line"></i>
-            </div>
-
-            <h3>
-                ResolveNow
-            </h3>
-
-            <p>
-                Online complaint management platform with secure login,
-                role-based dashboards, complaint tracking, REST APIs and
-                real-time communication.
-            </p>
-
-            <div class="tech-stack">
-
-                <span>React</span>
-                <span>Node.js</span>
-                <span>MongoDB</span>
-                <span>Socket.IO</span>
-
-            </div>
-
-            <a
-                href="https://github.com/Vsvardhan55/ResolveNow-Your-Platform-for-Online-Complaints"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Project
-                <i class="ri-arrow-right-up-line"></i>
-            </a>
-
-        </div>
-
-
-        <!-- PROJECT 6 -->
-
-        <div class="project-card">
-
-            <div class="project-icon">
-                <i class="ri-cpu-line"></i>
-            </div>
-
-            <h3>
-                AHB2APB Bridge
-            </h3>
-
-            <p>
-                Verilog RTL implementation of an AHB-to-APB bridge supporting
-                read/write transactions, address decoding, signal conversion,
-                FSM-based control and testbench verification.
-            </p>
-
-            <div class="tech-stack">
-
-                <span>Verilog</span>
-                <span>RTL</span>
-                <span>AHB</span>
-                <span>APB</span>
-
-            </div>
-
-            <a
-                href="https://github.com/Vsvardhan55"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Project
-                <i class="ri-arrow-right-up-line"></i>
-            </a>
-
-        </div>
-
-
-        <!-- PROJECT 7 -->
-
-        <div class="project-card">
-
-            <div class="project-icon">
-                <i class="ri-bar-chart-box-line"></i>
-            </div>
-
-            <h3>
-                Trinethra Supervisor Analyzer
-            </h3>
-
-            <p>
-                AI-assisted transcript analysis application that extracts
-                evidence, suggests KPI scores, identifies gaps and generates
-                follow-up questions.
-            </p>
-
-            <div class="tech-stack">
-
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>Ollama</span>
-
-            </div>
-
-            <a
-                href="https://github.com/Vsvardhan55/trinethra-supervisor-analyzer"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Project
-                <i class="ri-arrow-right-up-line"></i>
-            </a>
-
-        </div>
-
-
-        <!-- PROJECT 8 -->
-
-        <div class="project-card">
-
-            <div class="project-icon">
-                <i class="ri-graduation-cap-line"></i>
-            </div>
-
-            <h3>
-                Spring-MKV Student Management
-            </h3>
-
-            <p>
-                Java-based student management application developed with
-                Spring technology and database integration for managing
-                student information and workflows.
-            </p>
-
-            <div class="tech-stack">
-
-                <span>Java</span>
-                <span>Spring</span>
-                <span>SQL</span>
-
-            </div>
-
-            <a
-                href="https://github.com/Vsvardhan55/Spring-MKV-Student-Management-System"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Project
-                <i class="ri-arrow-right-up-line"></i>
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     ACADEMIC PROJECT
-========================================================= -->
-
-<section id="academic-project">
-
-    <div class="section-title">
-        <h2>Academic Project</h2>
-    </div>
-
-
-    <div class="academic-project-card">
-
-        <div class="academic-icon">
-            <i class="ri-flask-line"></i>
-        </div>
-
-        <div>
-
-            <span class="academic-label">
-                Final Year Project
-            </span>
-
-            <h3>
-                Comparative Analysis of Electrical Characteristics
-                of Si and Ge/Si Double-Gate Tunnel FETs
-            </h3>
-
-            <p>
-                Five-member academic project focused on comparing the
-                electrical characteristics of Silicon and Ge/Si Double-Gate
-                Tunnel FETs using Synopsys Sentaurus TCAD for low-power
-                semiconductor applications.
-            </p>
-
-            <p>
-                Contributed to device design, simulation setup, result
-                analysis, technical documentation and presentation. Studied
-                transfer characteristics, threshold voltage, subthreshold
-                swing, ON/OFF current ratio, transconductance and gate
-                capacitance to analyze device performance.
-            </p>
-
-            <div class="tech-stack">
-
-                <span>Sentaurus TCAD</span>
-                <span>Semiconductor Devices</span>
-                <span>TFET</span>
-                <span>Simulation</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     CODING PROFILES
-========================================================= -->
-
-<section id="profiles">
-
-    <div class="section-title">
-        <h2>Coding Profiles</h2>
-    </div>
-
-
-    <div class="profiles-container">
-
-
-        <a
-            href="https://github.com/Vsvardhan55"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="profile-card"
-        >
-
-            <i class="ri-github-fill"></i>
-
-            <h3>GitHub</h3>
-
-            <p>
-                Projects & Source Code
-            </p>
-
-        </a>
-
-
-        <a
-            href="https://www.hackerrank.com/profile/vardhanvalluri5"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="profile-card"
-        >
-
-            <i class="ri-code-s-slash-line"></i>
-
-            <h3>HackerRank</h3>
-
-            <p>
-                Programming Practice
-            </p>
-
-        </a>
-
-
-        <a
-            href="https://leetcode.com/user0681nl/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="profile-card"
-        >
-
-            <i class="ri-code-box-line"></i>
-
-            <h3>LeetCode</h3>
-
-            <p>
-                Problem Solving
-            </p>
-
-        </a>
-
-
-        <a
-            href="https://www.codechef.com/users/vardhanvalluri"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="profile-card"
-        >
-
-            <i class="ri-terminal-box-line"></i>
-
-            <h3>CodeChef</h3>
-
-            <p>
-                Competitive Programming
-            </p>
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     TECHNICAL SKILLS
-========================================================= -->
-
-<section id="skills">
-
-    <div class="section-title">
-        <h2>Technical Skills</h2>
-    </div>
-
-
-    <!-- FRONTEND -->
-
-    <div class="section-title">
-        <h3>Frontend Development</h3>
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill-box">HTML5</div>
-        <div class="skill-box">CSS3</div>
-        <div class="skill-box">JavaScript</div>
-        <div class="skill-box">TypeScript</div>
-        <div class="skill-box">React.js</div>
-        <div class="skill-box">Next.js</div>
-        <div class="skill-box">Angular</div>
-        <div class="skill-box">Tailwind CSS</div>
-        <div class="skill-box">Bootstrap</div>
-
-    </div>
-
-
-    <br><br>
-
-
-    <!-- BACKEND -->
-
-    <div class="section-title">
-        <h3>Backend & APIs</h3>
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill-box">Node.js</div>
-        <div class="skill-box">Express.js</div>
-        <div class="skill-box">FastAPI</div>
-        <div class="skill-box">Spring Boot</div>
-        <div class="skill-box">REST APIs</div>
-
-    </div>
-
-
-    <br><br>
-
-
-    <!-- PROGRAMMING -->
-
-    <div class="section-title">
-        <h3>Programming Languages</h3>
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill-box">Java</div>
-        <div class="skill-box">Python</div>
-        <div class="skill-box">C</div>
-        <div class="skill-box">JavaScript</div>
-        <div class="skill-box">TypeScript</div>
-        <div class="skill-box">Verilog HDL</div>
-
-    </div>
-
-
-    <br><br>
-
-
-    <!-- DATABASES -->
-
-    <div class="section-title">
-        <h3>Databases</h3>
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill-box">PostgreSQL</div>
-        <div class="skill-box">MongoDB</div>
-        <div class="skill-box">MySQL</div>
-        <div class="skill-box">SQL</div>
-
-    </div>
-
-
-    <br><br>
-
-
-    <!-- AI -->
-
-    <div class="section-title">
-        <h3>AI & LLM</h3>
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill-box">Ollama</div>
-        <div class="skill-box">LLM Integration</div>
-        <div class="skill-box">Prompt Engineering</div>
-        <div class="skill-box">AI Application Development</div>
-
-    </div>
-
-
-    <br><br>
-
-
-    <!-- HARDWARE -->
-
-    <div class="section-title">
-        <h3>Embedded Systems & VLSI</h3>
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill-box">Verilog HDL</div>
-        <div class="skill-box">RTL Design</div>
-        <div class="skill-box">RTL Verification</div>
-        <div class="skill-box">AMBA</div>
-        <div class="skill-box">AHB</div>
-        <div class="skill-box">APB</div>
-        <div class="skill-box">Digital Electronics</div>
-        <div class="skill-box">Embedded Systems</div>
-        <div class="skill-box">STM32</div>
-        <div class="skill-box">IoT</div>
-
-    </div>
-
-
-    <br><br>
-
-
-    <!-- NETWORKING -->
-
-    <div class="section-title">
-        <h3>Networking</h3>
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill-box">TCP/IP</div>
-        <div class="skill-box">OSI Model</div>
-        <div class="skill-box">IPv4 / IPv6</div>
-        <div class="skill-box">Subnetting</div>
-        <div class="skill-box">VLAN</div>
-        <div class="skill-box">DNS</div>
-        <div class="skill-box">VPN</div>
-        <div class="skill-box">Routing</div>
-        <div class="skill-box">Switching</div>
-        <div class="skill-box">Network Security</div>
-
-    </div>
-
-
-    <br><br>
-
-
-    <!-- SEMICONDUCTOR -->
-
-    <div class="section-title">
-        <h3>Semiconductor & EDA</h3>
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill-box">Synopsys Sentaurus TCAD</div>
-        <div class="skill-box">Semiconductor Simulation</div>
-        <div class="skill-box">TFET Analysis</div>
-        <div class="skill-box">Xilinx Vivado</div>
-
-    </div>
-
-
-    <br><br>
-
-
-    <!-- TOOLS -->
-
-    <div class="section-title">
-        <h3>Tools & Platforms</h3>
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill-box">Git</div>
-        <div class="skill-box">GitHub</div>
-        <div class="skill-box">VS Code</div>
-        <div class="skill-box">Postman</div>
-        <div class="skill-box">Cisco Packet Tracer</div>
-        <div class="skill-box">Wireshark</div>
-        <div class="skill-box">Arduino IDE</div>
-        <div class="skill-box">STM32CubeIDE</div>
-        <div class="skill-box">MATLAB</div>
-        <div class="skill-box">AutoCAD</div>
-        <div class="skill-box">Vercel</div>
-        <div class="skill-box">Netlify</div>
-        <div class="skill-box">Render</div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     EDUCATION
-========================================================= -->
-
-<section id="education">
-
-    <div class="section-title">
-        <h2>Education</h2>
-    </div>
-
-
-    <div class="education-container">
-
-
-        <div class="education-card">
-
-            <div class="education-icon">
-                <i class="ri-graduation-cap-line"></i>
-            </div>
-
-            <div>
-
-                <span class="education-date">
-                    2022 – 2026
-                </span>
-
-                <h3>
-                    Bachelor of Technology
-                </h3>
-
-                <h4>
-                    Electronics & Communication Engineering
-                </h4>
-
-                <p>
-                    Sasi Institute of Technology and Engineering
-                </p>
-
-                <strong>
-                    CGPA: 7.83 / 10
-                </strong>
-
-            </div>
-
-        </div>
-
-
-        <div class="education-card">
-
-            <div class="education-icon">
-                <i class="ri-book-open-line"></i>
-            </div>
-
-            <div>
-
-                <span class="education-date">
-                    2020 – 2022
-                </span>
-
-                <h3>
-                    Intermediate — MPC
-                </h3>
-
-                <p>
-                    Pragati Junior College, Tanuku
-                </p>
-
-                <strong>
-                    80.6%
-                </strong>
-
-            </div>
-
-        </div>
-
-
-        <div class="education-card">
-
-            <div class="education-icon">
-                <i class="ri-school-line"></i>
-            </div>
-
-            <div>
-
-                <span class="education-date">
-                    2020
-                </span>
-
-                <h3>
-                    10th Class
-                </h3>
-
-                <p>
-                    Montessori Residential High School, Tanuku
-                </p>
-
-                <strong>
-                    8.3 CGPA
-                </strong>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     CERTIFICATIONS & TRAINING
-========================================================= -->
-
-<section id="certifications">
-
-    <div class="section-title">
-        <h2>Certifications & Training</h2>
-    </div>
-
-    <div class="certifications-container">
-
-        <!-- Full Stack Java -->
-        <div class="certificate-card">
-
-            <i class="ri-code-s-slash-line"></i>
-
-            <h3>
-                Full Stack Java Development
-            </h3>
-
-            <p>
-                SkillDzire
-            </p>
-
-        </div>
-
-
-        <!-- Web Development & Cloud -->
-        <div class="certificate-card">
-
-            <i class="ri-cloud-line"></i>
-
-            <h3>
-                Web Development & Cloud Integration
-            </h3>
-
-            <p>
-                SkillDzire / APSCHE
-            </p>
-
-        </div>
-
-
-        <!-- Generative AI -->
-        <div class="certificate-card">
-
-            <i class="ri-sparkling-2-line"></i>
-
-            <h3>
-                Generative AI in Action
-            </h3>
-
-            <p>
-                IBM SkillsBuild
-            </p>
-
-        </div>
-
-
-        <!-- Cloud Computing -->
-        <div class="certificate-card">
-
-            <i class="ri-cloud-computing-line"></i>
-
-            <h3>
-                Cloud Computing Virtual Internship
-            </h3>
-
-            <p>
-                AWS Academy / EduSkills
-            </p>
-
-        </div>
-
-
-        <!-- Networking -->
-        <div class="certificate-card">
-
-            <i class="ri-router-line"></i>
-
-            <h3>
-                Networking Basics
-            </h3>
-
-            <p>
-                Cisco
-            </p>
-
-        </div>
-
-
-        <!-- Microchip Embedded Systems -->
-        <div class="certificate-card">
-
-            <i class="ri-cpu-line"></i>
-
-            <h3>
-                Microchip Embedded System Developer
-            </h3>
-
-            <p>
-                EduSkills / AICTE
-            </p>
-
-            <span class="certificate-type">
-                Virtual Internship
-            </span>
-
-        </div>
-
-
-        <!-- VLSI -->
-        <div class="certificate-card">
-
-            <i class="ri-cpu-line"></i>
-
-            <h3>
-                VLSI Virtual Internship
-            </h3>
-
-            <p>
-                SkillDzire / AICTE
-            </p>
-
-        </div>
-
-
-        <!-- Java Programming -->
-        <div class="certificate-card">
-
-            <i class="ri-java-line"></i>
-
-            <h3>
-                Java Programming for Beginners
-            </h3>
-
-            <p>
-                SkillUp by Simplilearn
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     SOFT SKILLS
-========================================================= -->
-
-<section id="soft-skills">
-
-    <div class="section-title">
-        <h2>Professional Strengths</h2>
-    </div>
-
-
-    <div class="skills-container">
-
-        <div class="skill-box">
-            <i class="ri-lightbulb-line"></i>
-            Problem Solving
-        </div>
-
-        <div class="skill-box">
-            <i class="ri-bar-chart-line"></i>
-            Analytical Thinking
-        </div>
-
-        <div class="skill-box">
-            <i class="ri-team-line"></i>
-            Team Collaboration
-        </div>
-
-        <div class="skill-box">
-            <i class="ri-presentation-line"></i>
-            Communication
-        </div>
-
-        <div class="skill-box">
-            <i class="ri-time-line"></i>
-            Time Management
-        </div>
-
-        <div class="skill-box">
-            <i class="ri-user-star-line"></i>
-            Leadership
-        </div>
-
-        <div class="skill-box">
-            <i class="ri-refresh-line"></i>
-            Adaptability
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     CONTACT
-========================================================= -->
-
-<section id="contact">
-
-    <div class="section-title">
-        <h2>Let's Connect</h2>
-    </div>
-
-
-    <div class="contact-container">
-
-
-        <div class="contact-box">
-
-            <i class="ri-mail-fill"></i>
-
-            <h3>Email</h3>
-
-            <p>
-                <a href="mailto:vardhanvalluri5@gmail.com">
-                    vardhanvalluri5@gmail.com
-                </a>
-            </p>
-
-        </div>
-
-
-        <div class="contact-box">
-
-            <i class="ri-phone-fill"></i>
-
-            <h3>Phone</h3>
-
-            <p>
-                <a href="tel:+918523874166">
-                    +91 85238 74166
-                </a>
-            </p>
-
-        </div>
-
-
-        <div class="contact-box">
-
-            <i class="ri-map-pin-fill"></i>
-
-            <h3>Location</h3>
-
-            <p>
-                Tanuku, India
-            </p>
-
-        </div>
-
-
-        <div class="contact-box">
-
-            <i class="ri-linkedin-box-fill"></i>
-
-            <h3>LinkedIn</h3>
-
-            <p>
-                <a
-                    href="https://www.linkedin.com/in/sethu-vardhan-valluri"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Connect with me
-                </a>
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- FOOTER -->
-
-    <div class="footer">
-
-        <div class="social-icons">
-
-            <a
-                href="https://github.com/Vsvardhan55"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <i class="ri-github-fill"></i>
-            </a>
-
-            <a
-                href="https://www.linkedin.com/in/sethu-vardhan-valluri"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <i class="ri-linkedin-fill"></i>
-            </a>
-
-            <a
-                href="mailto:vardhanvalluri5@gmail.com"
-            >
-                <i class="ri-mail-fill"></i>
-            </a>
-
-        </div>
-
-        <p>
-            © 2026 Sethu Vardhan Valluri. All Rights Reserved.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     SIMPLE NAVIGATION SCRIPT
-========================================================= -->
-
-<script>
-
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav ul li a");
-
-    window.addEventListener("scroll", () => {
-
-        let current = "";
-
-        sections.forEach(section => {
-
-            const sectionTop = section.offsetTop - 150;
-            const sectionHeight = section.clientHeight;
-
-            if (
-                window.scrollY >= sectionTop &&
-                window.scrollY < sectionTop + sectionHeight
-            ) {
-                current = section.getAttribute("id");
             }
 
         });
 
-        navLinks.forEach(link => {
 
-            link.classList.remove("active");
+        /* =====================================================
+           CLOSE MOBILE MENU AFTER CLICK
+        ===================================================== */
 
-            if (
-                link.getAttribute("href") === "#" + current
-            ) {
-                link.classList.add("active");
-            }
+        document.querySelectorAll(".nav-menu a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navMenu.classList.remove("open");
+
+                const icon = menuBtn.querySelector("i");
+
+                icon.className = "ri-menu-3-line";
+
+            });
 
         });
 
-    });
 
-</script>
+        /* =====================================================
+           ACTIVE NAVIGATION
+        ===================================================== */
+
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-menu a");
+
+        function updateActiveNav() {
+
+            let currentSection = "home";
+
+            const scrollPosition =
+                window.scrollY + 150;
+
+            sections.forEach(section => {
+
+                const sectionTop =
+                    section.offsetTop;
+
+                const sectionHeight =
+                    section.offsetHeight;
+
+                if (
+                    scrollPosition >= sectionTop &&
+                    scrollPosition < sectionTop + sectionHeight
+                ) {
+
+                    currentSection =
+                        section.getAttribute("id");
+
+                }
+
+            });
+
+
+            navLinks.forEach(link => {
+
+                link.classList.remove("active");
+
+                if (
+                    link.getAttribute("href") ===
+                    "#" + currentSection
+                ) {
+
+                    link.classList.add("active");
+
+                }
+
+            });
+
+        }
+
+        window.addEventListener(
+            "scroll",
+            updateActiveNav
+        );
+
+        updateActiveNav();
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const observer =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("show");
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+
+        /* =====================================================
+           CONTACT FORM
+        ===================================================== */
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+        contactForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("name").value.trim();
+
+                const email =
+                    document.getElementById("email").value.trim();
+
+                const subject =
+                    document.getElementById("subject").value.trim();
+
+                const message =
+                    document.getElementById("message").value.trim();
+
+
+                const mailSubject =
+                    encodeURIComponent(
+                        subject || "Portfolio Contact"
+                    );
+
+
+                const mailBody =
+                    encodeURIComponent(
+                        "Name: " + name +
+                        "\nEmail: " + email +
+                        "\n\nMessage:\n" + message
+                    );
+
+
+                window.location.href =
+                    `mailto:vardhan.valluri@sasi.ac.in?subject=${mailSubject}&body=${mailBody}`;
+
+            }
+        );
+
+
+        /* =====================================================
+           PREVENT BROKEN IMAGE LOOK
+        ===================================================== */
+
+        const profileImage =
+            document.querySelector(".profile-image");
+
+        profileImage.addEventListener(
+            "error",
+            function() {
+
+                this.style.display = "none";
+
+            }
+        );
+
+    </script>
 
 </body>
 </html>
